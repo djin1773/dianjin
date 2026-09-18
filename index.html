@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dian Jin — Fudan University undergraduate personal academic website." />
+    <title>Dian Jin | Personal Website</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a class="wordmark" href="#top" aria-label="Back to top">DJ<span>.</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="sr-only" data-i18n="menu">Menu</span><span aria-hidden="true">+</span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+          <a href="#about" data-i18n="navAbout">About</a>
+          <a href="#research" data-i18n="navResearch">Research</a>
+          <a href="#publications" data-i18n="navPublications">Publications</a>
+          <a href="#resume" data-i18n="navResume">Résumé</a>
+          <a href="#contact" data-i18n="navContact">Contact</a>
+        </nav>
+        <button class="language-toggle" type="button" aria-label="Switch language">EN</button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero container" aria-labelledby="page-title">
+        <div class="hero-copy reveal">
+          <p class="eyebrow" data-i18n="heroKicker">Academic profile · 2026</p>
+          <h1 id="page-title" data-person="name">Dian Jin</h1>
+          <p class="hero-role" data-person="role">Undergraduate Student</p>
+          <p class="hero-intro" data-person="intro">A concise space for research, writing, and professional work.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#publications" data-i18n="viewPublications">View publications</a>
+            <a class="text-link" href="#contact" data-i18n="getInTouch">Get in touch <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="portrait-wrap reveal delay-1" aria-label="Portrait of Dian Jin" role="img">
+          <div class="portrait" id="portrait">
+            <span data-person="initials">DR</span>
+            <p data-i18n="portraitPending">Portrait forthcoming</p>
+          </div>
+          <p class="portrait-caption" data-i18n="portraitCaption">Based in China · Available for collaboration</p>
+        </div>
+      </section>
+
+      <section class="section section-rule" id="about" aria-labelledby="about-title">
+        <div class="container section-grid">
+          <p class="section-label">01 / <span data-i18n="navAbout">About</span></p>
+          <div class="section-content reveal">
+            <h2 id="about-title" data-i18n="aboutTitle">A considered approach to research.</h2>
+            <p class="lead" data-person="about">This site collects selected research and professional materials. It is designed to make the work easy to read, cite, and discuss.</p>
+            <dl class="facts" id="facts"></dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tint" id="research" aria-labelledby="research-title">
+        <div class="container section-grid">
+          <p class="section-label">02 / <span data-i18n="navResearch">Research</span></p>
+          <div class="section-content reveal">
+            <h2 id="research-title" data-i18n="researchTitle">Research interests</h2>
+            <div class="interests" id="interests"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="publications" aria-labelledby="publications-title">
+        <div class="container section-grid">
+          <p class="section-label">03 / <span data-i18n="navPublications">Publications</span></p>
+          <div class="section-content reveal">
+            <div class="heading-row">
+              <div>
+                <h2 id="publications-title" data-i18n="publicationsTitle">Selected projects & papers</h2>
+                <p class="section-note" data-i18n="publicationsNote">Selected undergraduate research and modeling projects.</p>
+              </div>
+              <span class="count" id="publication-count" aria-label="Number of publications"></span>
+            </div>
+            <div class="publication-list" id="publication-list"></div>
+            <p class="document-hint" data-i18n="documentHint">PDF files will be available here once they are added to the repository.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tint" id="resume" aria-labelledby="resume-title">
+        <div class="container section-grid">
+          <p class="section-label">04 / <span data-i18n="navResume">Résumé</span></p>
+          <div class="section-content reveal">
+            <h2 id="resume-title" data-i18n="resumeTitle">Curriculum vitae</h2>
+            <p class="lead resume-copy" data-i18n="resumeCopy">A complete overview of education, research experience, and professional history.</p>
+            <div class="resume-card">
+              <div class="resume-mark" aria-hidden="true">CV</div>
+              <div>
+                <p class="resume-file" id="resume-filename">Dian_Jin_CV.pdf</p>
+                <p class="muted" data-i18n="resumeStatus">Dian Jin CV</p>
+              </div>
+              <div class="card-actions" id="resume-actions"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="container contact-inner reveal">
+          <p class="section-label">05 / <span data-i18n="navContact">Contact</span></p>
+          <h2 id="contact-title" data-i18n="contactTitle">Let’s start a conversation.</h2>
+          <p class="contact-copy" data-i18n="contactCopy">For research discussion or professional inquiries, please write to:</p>
+          <a class="email-link" data-person="email" href="mailto:your.email@example.com">your.email@example.com</a>
+          <div class="social-links" id="social-links" aria-label="Social links"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>© <span id="year"></span> <span data-person="name">Dian Jin</span></span>
+        <a href="#top" data-i18n="backToTop">Back to top ↑</a>
+      </div>
+    </footer>
+    <script src="assets/data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

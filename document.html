@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document preview | Dian Jin</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>.viewer-header{height:70px;border-bottom:1px solid var(--line);display:flex;align-items:center}.viewer-header .container{display:flex;justify-content:space-between;align-items:center;gap:20px}.viewer-main{height:calc(100vh - 70px);padding:20px 0}.viewer-frame{width:100%;height:100%;border:1px solid var(--line);background:#eee}.viewer-empty{display:grid;place-items:center;height:100%;text-align:center;color:var(--muted)}.viewer-empty p{margin:0}.viewer-empty a{margin-top:16px;color:var(--ink);border-bottom:1px solid var(--ink)}@media(max-width:760px){.viewer-main{padding:0;height:calc(100vh - 70px)}.viewer-frame{border:0}}</style>
+  </head>
+  <body>
+    <header class="viewer-header"><div class="container"><a class="wordmark" href="index.html">DR<span>.</span></a><a class="text-link" href="index.html#publications">← Back to site</a></div></header>
+    <main class="viewer-main container" id="viewer"></main>
+    <script>
+      const file = new URLSearchParams(location.search).get('file');
+      const safeFile = file && !file.includes('..') && /^assets\/(papers|resume)\/[A-Za-z0-9._/-]+\.pdf$/i.test(file);
+      const viewer = document.getElementById('viewer');
+      if (safeFile) { viewer.innerHTML = `<object class="viewer-frame" data="${encodeURI(file)}" type="application/pdf"><div class="viewer-empty"><div><p>Your browser cannot preview this PDF.</p><a href="${encodeURI(file)}" download>Download the document</a></div></div></object>`; }
+      else { viewer.innerHTML = '<div class="viewer-empty"><p>Document not found.</p></div>'; }
+    </script>
+  </body>
+</html>
